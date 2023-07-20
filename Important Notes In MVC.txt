@@ -1,0 +1,55 @@
+Method:- ParaMeter in Function 
+
+https://localhost:44306/Admin/City/GetStatesByCountry?CountryId=1&StateId=1
+
+Above line are used for the parameter pass in the any function 
+
+First parameter pass by the ?(quary String)
+And Aftrer that all parameter pass by &(And person).
+
+Ex.:-
+
+ public IActionResult GetStatesByCountry(int countryId,int StateId)
+ {
+     var states = _unitOfWork.State.GetAll(s => s.CountryId == countryId);
+     return Json(states);
+ }
+
+
+For Generate the Script Changes in SSMS. && Changes of model and their property.
+
+This Method Path Is:- 
+
+SSMS > TOOLS > DESIGN > TABLE AND DATABASE DESIGENERS  > CHEKED => AUTO GENERATE CHANGES SCRIPTS
+
+=> This method are used for the script are the changes is auto generate on the SSMS.
+
+
+This Method Path Is:- 
+
+SSMS > TOOLS > DESIGN > TABLE AND DATABASE DESIGENERS  > UNCHEKED => PREVENT SAVING CHANGES THAT REQUIRE TABLE RE-CREATION.
+
+=> This method are used for The Table when create the table they are the not given permission in foreign key and that so that we unchecked this option.
+
+Project Name given in This Formate for the script file:-  
+
+=>  Month||Date_Number Of Edit PerDay_Add/Alter_[TableName]
+
+Like:-  0530_1_add_[StudentSubmissionsLog]
+
+Search Functanality:- 
+
+Contains:-  contains are used for when we search they searched for frontside and back side both.
+StartWith:- Start with searched from the start.
+
+ADD Style In View:-
+
+@RenderSection("Styles", required: false)
+
+Convert Json File Into the object:-
+
+alert(JSON.stringify(data));  => json file are converted into object and data show replace of [object object].
+
+
+
+

@@ -1,0 +1,34 @@
+Data First Approach Steps for Add Models :-
+
+--->> YoutubeLink :- https://youtu.be/TE1Hpi1SSaE
+
+--->> WebSite :- 1. https://geeksarray.com/blog/entity-framework-core-database-first-tutorial
+		 2. https://codetosolutions.com/blog/12/how-to-update-entity-framework-core-in-asp.net-core-application-for-database-first-approach
+		 3. https://stackoverflow.com/questions/56087543/how-to-update-entity-framework-core-after-adding-a-new-table-to-the-database#:~:text=Try%20this%20cmd%3A%20Scaffold-DbContext%20%22Server%3D,%28localdb%29mssqllocaldb%3BDatabase%3DBlogging%3BTrusted_Connection%3DTrue%3B%22%20Microsoft.EntityFrameworkCore.SqlServer%20-OutputDir%20Models%20-Force
+		
+1. This is for All Models Add Command :- 
+ 
+-->>  Scaffold-DbContext "Server=HARDIK\SQLEXPRESS;Database=ProductManagment;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models  -DataAnnotations  -f
+
+2. This is for Single Model(Table) And Update Field in Single Model :- 
+
+-->>  Scaffold-DbContext "Server=HARDIK\SQLEXPRESS;Database=ProductManagment;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -t Hardikds,HardikKanzariya –context ApplicationDbContext –contextDir Data -DataAnnotations  -f
+
+3.   This is for Data Context  Folder in Models Folder :- All Model Add in Models Folder And dbfirstcontext Add in Repos Folder With DataAnnotaions
+
+-->> Scaffold-DbContext "Server=HARDIK\SQLEXPRESS;Database=ProductManagment;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -t Hardikds,HardikKanzariya –context ApplicationDbContext –contextDir Data -DataAnnotations  -f
+
+
+
+Scaffold-DbContext "Server=HARDIK\SQLEXPRESS;Database=ProductManagment;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models  -DataAnnotations  -f
+
+
+Scaffold DbContext:-
+1.Connection:- used to provide connection string
+2.Provider :- used to provide the Provider info
+3.OutputDir :- generate model inn specific folder.
+4.Context :- provide name of our database context
+5.contextDir :- Generate dbcontext in specific tables
+6.tables:- generate models for specific tables
+7.DataAnnotations:- Generate models with data annotations
+8.Force:- forcedly updating the existing files.
